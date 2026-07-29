@@ -1,443 +1,506 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090a0f">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0f12" />
 
-  <title>Pedro Rocha — Desenvolvedor Back-End</title>
-  <meta
-    name="description"
-    content="Portfólio de Pedro Rocha, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor back-end em formação."
-  >
+    <title>Pedro Rocha · Desenvolvedor Back-End</title>
+    <meta
+      name="description"
+      content="Portfólio de Pedro Rocha, estudante de Análise e Desenvolvimento de Sistemas."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32.png"
+    />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
 
-<body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="logo" href="#inicio" aria-label="Voltar ao início">
-        ped<span>rocha</span>.dev
-      </a>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="pedrocha.dev" />
+    <meta property="og:title" content="Pedro Rocha · Desenvolvedor Back-End" />
+    <meta
+      property="og:description"
+      content="Estudante de ADS construindo produtos completos — Salonia e Diva de Chapéu — com foco em back-end."
+    />
+    <meta
+      property="og:image"
+      content="https://pedrochadev.vercel.app/img/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://pedrochadev.vercel.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pedro Rocha · Desenvolvedor Back-End" />
+    <meta
+      name="twitter:description"
+      content="Estudante de ADS construindo produtos completos — Salonia e Diva de Chapéu — com foco em back-end."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pedrochadev.vercel.app/img/og-image.png"
+    />
 
-      <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#stack">Stack</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-      <a
-        class="nav-cta"
-        href="https://github.com/JPedroRochaC"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02.01 2.04.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.29 0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
+  <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <span class="ambient-blob ambient-blob-1"></span>
+      <span class="ambient-blob ambient-blob-2"></span>
+      <span class="ambient-blob ambient-blob-3"></span>
     </div>
-  </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div class="hero-content">
-          <div class="availability">
-            <span class="availability-dot"></span>
-            Disponível para oportunidades de estágio
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="logo" href="#inicio" aria-label="Voltar ao início">
+          ped<span>rocha</span>.dev
+        </a>
+
+        <nav id="nav-links" class="nav-links" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#stack">Stack</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#formacao">Formação</a>
+          <a class="nav-links-contact" href="#contato">Contato</a>
+        </nav>
+
+        <a class="nav-contact" href="#contato">
+          Vamos conversar <span aria-hidden="true">↘</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Abrir menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <div class="menu-backdrop"></div>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="overline">
+              <span></span>
+              Fortaleza, CE · disponível para estágio
+            </p>
+
+            <p class="hero-kicker">Olá, eu sou</p>
+            <h1>Pedro Rocha</h1>
+            <p class="hero-role">Desenvolvedor Back-End em formação</p>
+
+            <p class="hero-description">
+              Estudante de Análise e Desenvolvimento de Sistemas, hoje
+              construindo e mantendo produtos reais como a Salonia e a Diva de
+              Chapéu. Foco em Node.js, APIs REST e banco de dados.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projetos">
+                Conhecer meus projetos <span aria-hidden="true">→</span>
+              </a>
+              <a
+                class="text-link"
+                href="https://www.linkedin.com/in/pedro-rocha-646085342"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                class="text-link"
+                href="https://github.com/JPedroRochaC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
 
-          <p class="hero-intro">Olá, eu sou</p>
-          <h1>João Pedro <span>Rocha</span></h1>
-          <p class="hero-role">Desenvolvedor Back-End em formação</p>
-
-          <p class="hero-description">
-            Estudante de Análise e Desenvolvimento de Sistemas, focado em
-            Node.js, APIs REST e bancos de dados. Transformo aprendizado em
-            projetos reais, funcionais e bem organizados.
-          </p>
-
-          <ul class="identity-list" aria-label="Informações pessoais">
-            <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 21s7-5.35 7-12A7 7 0 1 0 5 9c0 6.65 7 12 7 12Zm0-9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
-              </svg>
-              Fortaleza, Ceará
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m12 3 10 5-10 5L2 8l10-5Zm-6 8.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5l-6 3-6-3Z"/>
-              </svg>
-              ADS · 2º semestre
-            </li>
-          </ul>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projetos">
-              Ver meus projetos
-              <span aria-hidden="true">→</span>
-            </a>
-            <a
-              class="btn btn-secondary"
-              href="https://www.linkedin.com/in/pedro-rocha-646085342"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-
-        <div class="profile-area">
-          <div class="profile-glow"></div>
-
-          <div class="profile-card">
-            <div class="profile-image">
-              <div class="profile-fallback" aria-hidden="true">PR</div>
+          <figure class="portrait">
+            <div class="portrait-frame">
               <img
                 src="/img/joao.jpeg"
-                alt="Foto de João Pedro Rocha"
+                alt="João Pedro Rocha"
                 width="640"
                 height="760"
                 fetchpriority="high"
-                onerror="this.hidden=true"
-              >
+              />
             </div>
-
-            <div class="profile-caption">
-              <div>
-                <strong>Pedro Rocha</strong>
-                <span>@pedrocha.dev</span>
-              </div>
-              <span class="profile-status" aria-label="Disponível"></span>
-            </div>
-          </div>
-
-          <div class="floating-card floating-code">
-            <span>&lt;/&gt;</span>
-            <div>
-              <strong>Back-End</strong>
-              <small>Node.js + Express</small>
-            </div>
-          </div>
-
-          <div class="floating-card floating-location">
-            <span>●</span>
-            <div>
-              <strong>Fortaleza</strong>
-              <small>CE, Brasil</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrap quick-facts">
-        <div>
-          <strong>02</strong>
-          <span>projetos em destaque</span>
-        </div>
-        <div>
-          <strong>Node.js</strong>
-          <span>foco principal</span>
-        </div>
-        <div>
-          <strong>PostgreSQL</strong>
-          <span>banco de dados</span>
-        </div>
-        <div>
-          <strong>2026</strong>
-          <span>em constante evolução</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-about" id="sobre">
-      <div class="wrap about-grid">
-        <div class="section-heading">
-          <p class="eyebrow">01 · sobre mim</p>
-          <h2>Mais do que código, gosto de construir soluções.</h2>
+            <figcaption>
+              <span>Pedro Rocha</span>
+              <span>ADS · 2º semestre</span>
+            </figcaption>
+          </figure>
         </div>
 
-        <div class="about-content">
-          <p class="about-lead">
-            Sou estudante de Análise e Desenvolvimento de
-            Sistemas na Unifametro e estou construindo minha carreira com foco
-            em desenvolvimento back-end.
-          </p>
-          <p>
-            Aprendo desenvolvendo: planejo a estrutura, construo a API, modelo o
-            banco de dados e conecto tudo a uma interface funcional. Atualmente,
-            busco minha primeira oportunidade para evoluir ao lado de uma equipe
-            e contribuir em projetos reais.
-          </p>
-
-          <div class="about-points">
-            <div>
-              <span>01</span>
-              <strong>Organização</strong>
-              <p>Código e estrutura pensados para serem claros e fáceis de manter.</p>
-            </div>
-            <div>
-              <span>02</span>
-              <strong>Aprendizado</strong>
-              <p>Curiosidade para entender problemas e aprender novas soluções.</p>
-            </div>
-            <div>
-              <span>03</span>
-              <strong>Prática</strong>
-              <p>Conhecimento aplicado em produtos e projetos funcionais.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="stack">
-      <div class="wrap">
-        <div class="section-heading section-heading-center">
-          <p class="eyebrow">02 · tecnologias</p>
-          <h2>Minha stack</h2>
-          <p>
-            Tecnologias que utilizo para desenvolver aplicações, APIs e bancos
-            de dados.
-          </p>
-        </div>
-
-        <div class="stack-groups">
-          <article class="stack-group">
-            <div class="stack-group-title">
-              <span>01</span>
-              <div>
-                <h3>Back-End</h3>
-                <p>Onde concentro meus estudos e projetos.</p>
-              </div>
-            </div>
-
-            <div class="tech-grid">
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">
-                <div><strong>Node.js</strong><span>Runtime</span></div>
-              </div>
-              <div class="tech-card">
-                <img class="icon-light" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="" loading="lazy">
-                <div><strong>Express</strong><span>Framework</span></div>
-              </div>
-              <div class="tech-card tech-card-symbol">
-                <span class="api-symbol">API</span>
-                <div><strong>APIs REST</strong><span>Arquitetura</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stack-group">
-            <div class="stack-group-title">
-              <span>02</span>
-              <div>
-                <h3>Bancos de dados</h3>
-                <p>Modelagem, consultas e persistência.</p>
-              </div>
-            </div>
-
-            <div class="tech-grid">
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">
-                <div><strong>PostgreSQL</strong><span>Banco relacional</span></div>
-              </div>
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" loading="lazy">
-                <div><strong>MySQL</strong><span>Banco relacional</span></div>
-              </div>
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="" loading="lazy">
-                <div><strong>Supabase</strong><span>Banco e autenticação</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stack-group">
-            <div class="stack-group-title">
-              <span>03</span>
-              <div>
-                <h3>Front-End</h3>
-                <p>Interfaces para apresentar e integrar minhas APIs.</p>
-              </div>
-            </div>
-
-            <div class="tech-grid">
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy">
-                <div><strong>HTML5</strong><span>Estrutura</span></div>
-              </div>
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy">
-                <div><strong>CSS3</strong><span>Estilização</span></div>
-              </div>
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy">
-                <div><strong>JavaScript</strong><span>Interatividade</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stack-group">
-            <div class="stack-group-title">
-              <span>04</span>
-              <div>
-                <h3>Ferramentas</h3>
-                <p>Versionamento e desenvolvimento.</p>
-              </div>
-            </div>
-
-            <div class="tech-grid">
-              <div class="tech-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy">
-                <div><strong>Git</strong><span>Versionamento</span></div>
-              </div>
-              <div class="tech-card">
-                <img class="icon-light" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" loading="lazy">
-                <div><strong>GitHub</strong><span>Repositórios</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-projects" id="projetos">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">03 · projetos</p>
-          <h2>Projetos que mostram minha evolução</h2>
-          <p>Aplicações desenvolvidas para resolver problemas reais.</p>
-        </div>
-
-        <div class="project-list">
-          <article class="project-card project-featured">
-            <a
-              class="project-image"
-              href="https://github.com/JPedroRochaC/salonia"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Abrir repositório da Salonia"
-            >
-              <img
-                src="/img/salonia.png"
-                alt="Prévia da plataforma Salonia"
-                loading="lazy"
-              >
-            </a>
-
-            <div class="project-content">
-              <div class="project-number">Projeto 01</div>
-              <div class="project-title-row">
-                <h3>Salonia</h3>
-                <span>Em desenvolvimento</span>
-              </div>
-              <p>
-                Plataforma de agendamento e gestão para profissionais da beleza,
-                com painel administrativo, agenda pública e estrutura
-                multiempresa.
-              </p>
-              <ul class="project-techs">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PostgreSQL</li>
-                <li>Supabase</li>
-              </ul>
-              <a
-                class="project-link"
-                href="https://conhecasalonia.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Conheça a Salonia <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                class="project-link"
-                href="https://github.com/JPedroRochaC/salonia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver repositório <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <a
-              class="project-image"
-              href="https://divadechapeu.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Abrir site Diva de Chapéu"
-            >
-              <img
-                src="/img/diva.png"
-                alt="Prévia do site Diva de Chapéu"
-                loading="lazy"
-              >
-            </a>
-
-            <div class="project-content">
-              <div class="project-number">Projeto 02</div>
-              <div class="project-title-row">
-                <h3>Diva de Chapéu</h3>
-                <span>Publicado</span>
-              </div>
-              <p>
-                Loja de acessórios com catálogo dinâmico, carrinho e finalização
-                do pedido diretamente pelo WhatsApp.
-              </p>
-              <ul class="project-techs">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Supabase</li>
-              </ul>
-              <a
-                class="project-link"
-                href="https://divadechapeu.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver projeto ao vivo <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contato">
-      <div class="wrap">
-        <div class="contact-card">
+        <div class="wrap hero-index" aria-label="Resumo profissional">
           <div>
-            <p class="eyebrow">04 · contato</p>
-            <h2>Vamos construir algo juntos?</h2>
+            <span>Foco</span>
+            <strong>Back-End</strong>
+          </div>
+          <div>
+            <span>Stack principal</span>
+            <strong>Node.js + PostgreSQL</strong>
+          </div>
+          <div>
+            <span>Agora</span>
+            <strong>Construindo a Salonia</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="sobre">
+        <div class="wrap editorial-grid">
+          <div class="section-title">
+            <p class="section-label">Sobre</p>
+            <h2>Aprendo construindo produtos completos.</h2>
+          </div>
+
+          <div class="about-copy">
+            <p class="lead">
+              Sou estudante de Análise e Desenvolvimento de Sistemas na
+              Unifametro e estou construindo minha carreira com foco em
+              desenvolvimento back-end.
+            </p>
             <p>
-              Estou aberto a oportunidades de estágio, projetos e conexões com
-              pessoas da área de tecnologia.
+              Gosto de entender o problema antes de escrever o código. Nos meus
+              projetos, participo do planejamento, modelo o banco de dados,
+              desenvolvo APIs e conecto o back-end a interfaces funcionais.
+            </p>
+            <p>
+              Atualmente busco minha primeira oportunidade na área para aprender
+              com uma equipe, contribuir com projetos reais e continuar
+              evoluindo como desenvolvedor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stack" id="stack">
+        <div class="wrap">
+          <div class="section-intro">
+            <div>
+              <p class="section-label">Stack</p>
+              <h2>Tecnologias que fazem parte do meu processo.</h2>
+            </div>
+            <p>
+              Minha base atual para criar aplicações web, APIs, integrações e
+              persistência de dados.
             </p>
           </div>
 
-          <div class="contact-actions">
+          <div class="stack-list">
+            <article class="stack-row">
+              <div class="stack-name">
+                <span>BE</span>
+                <h3>Back-End</h3>
+              </div>
+              <div class="technology-list">
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>Node.js</span>
+                </div>
+                <div class="technology technology-light">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>Express</span>
+                </div>
+                <div class="technology technology-symbol">
+                  <b>API</b>
+                  <span>REST</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-row">
+              <div class="stack-name">
+                <span>DB</span>
+                <h3>Dados</h3>
+              </div>
+              <div class="technology-list">
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>PostgreSQL</span>
+                </div>
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>MySQL</span>
+                </div>
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>Supabase</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-row">
+              <div class="stack-name">
+                <span>FE</span>
+                <h3>Front-End</h3>
+              </div>
+              <div class="technology-list">
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>HTML</span>
+                </div>
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>CSS</span>
+                </div>
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-row">
+              <div class="stack-name">
+                <span>OPS</span>
+                <h3>Ferramentas</h3>
+              </div>
+              <div class="technology-list">
+                <div class="technology">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>Git</span>
+                </div>
+                <div class="technology technology-light">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>GitHub</span>
+                </div>
+                <div class="technology technology-light">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>Vercel</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projetos">
+        <div class="wrap">
+          <div class="section-intro">
+            <div>
+              <p class="section-label">Projetos</p>
+              <h2>Produtos que mostram minha evolução na prática.</h2>
+            </div>
+            <p>
+              Dois produtos que planejei e desenvolvi para resolver problemas
+              reais.
+            </p>
+          </div>
+
+          <div class="project-list">
+            <article class="project">
+              <a
+                class="project-visual"
+                href="https://conhecasalonia.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Conhecer a Salonia"
+              >
+                <img
+                  src="/img/salonia.png"
+                  alt="Identidade visual da Salonia"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="project-copy">
+                <p class="project-type">Produto próprio · Em desenvolvimento</p>
+                <h3>Salonia</h3>
+                <p>
+                  Plataforma de agendamento e gestão para profissionais da
+                  beleza, com painel administrativo, agenda pública e estrutura
+                  multiempresa.
+                </p>
+
+                <dl class="project-details">
+                  <div>
+                    <dt>Meu trabalho</dt>
+                    <dd>Produto, back-end, banco e front-end</dd>
+                  </div>
+                  <div>
+                    <dt>Tecnologias</dt>
+                    <dd>Node.js, Express, PostgreSQL e Supabase</dd>
+                  </div>
+                </dl>
+
+                <div class="project-links">
+                  <a
+                    href="https://conhecasalonia.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Conhecer a Salonia <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    href="https://github.com/JPedroRochaC/salonia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver código <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project project-reverse">
+              <a
+                class="project-visual"
+                href="https://divadechapeu.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o projeto Diva de Chapéu"
+              >
+                <img
+                  src="/img/diva.png"
+                  alt="Prévia da loja Diva de Chapéu"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="project-copy">
+                <p class="project-type">Projeto para cliente · Publicado</p>
+                <h3>Diva de Chapéu</h3>
+                <p>
+                  Loja de acessórios com catálogo dinâmico, carrinho, cálculo de
+                  frete e finalização do pedido diretamente pelo WhatsApp.
+                </p>
+
+                <dl class="project-details">
+                  <div>
+                    <dt>Meu trabalho</dt>
+                    <dd>Desenvolvimento completo e publicação</dd>
+                  </div>
+                  <div>
+                    <dt>Tecnologias</dt>
+                    <dd>JavaScript, Node.js, Express e Supabase</dd>
+                  </div>
+                </dl>
+
+                <div class="project-links">
+                  <a
+                    href="https://divadechapeu.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver projeto ao vivo <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education" id="formacao">
+        <div class="wrap editorial-grid">
+          <div class="section-title">
+            <p class="section-label">Formação</p>
+            <h2>Minha formação e o caminho que estou seguindo.</h2>
+          </div>
+
+          <div class="education-list">
+            <article>
+              <span>Graduação</span>
+              <div>
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <p>Unifametro · 2º semestre</p>
+              </div>
+            </article>
+            <article>
+              <span>Estudos</span>
+              <div>
+                <h3>Back-End e bancos de dados</h3>
+                <p>Node.js, APIs REST, SQL, PostgreSQL, Git e GitHub</p>
+              </div>
+            </article>
+            <article>
+              <span>Objetivo</span>
+              <div>
+                <h3>Primeira oportunidade em tecnologia</h3>
+                <p>Estágio em desenvolvimento, suporte ou áreas relacionadas</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <div class="wrap contact-inner">
+          <p class="section-label">Contato</p>
+          <h2>Tem uma oportunidade ou uma boa ideia?</h2>
+          <p>Vamos conversar e descobrir o que podemos construir juntos.</p>
+
+          <div class="contact-links">
             <a
-              class="btn btn-contact"
+              class="button button-contact"
               href="https://www.linkedin.com/in/pedro-rocha-646085342"
               target="_blank"
               rel="noopener noreferrer"
@@ -445,28 +508,56 @@
               Falar pelo LinkedIn <span aria-hidden="true">→</span>
             </a>
             <a
-              class="contact-text-link"
               href="https://wa.me/5585996269742"
               target="_blank"
               rel="noopener noreferrer"
             >
-              ou chamar no WhatsApp
+              WhatsApp <span aria-hidden="true">↗</span>
             </a>
+            <button
+              class="copy-btn"
+              type="button"
+              data-copy="+55 85 99626-9742"
+              data-label="Copiar número"
+              data-copied-label="Copiado!"
+            >
+              <span class="copy-btn-label">Copiar número</span>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <p>© 2026 Pedro Rocha · Fortaleza, CE</p>
-      <div class="footer-links">
-        <a href="https://github.com/JPedroRochaC" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/pedro-rocha-646085342" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.instagram.com/pedrocha.dev" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <footer>
+      <div class="wrap footer-inner">
+        <p>© 2026 Pedro Rocha · Fortaleza, CE</p>
+        <div>
+          <a
+            href="https://github.com/JPedroRochaC"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/pedro-rocha-646085342"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://www.instagram.com/pedrocha.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo">
+      ↑
+    </button>
+
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
