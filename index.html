@@ -55,71 +55,75 @@
   </head>
 
   <body>
-    <div class="ambient-bg" aria-hidden="true">
-      <span class="ambient-blob ambient-blob-1"></span>
-      <span class="ambient-blob ambient-blob-2"></span>
-      <span class="ambient-blob ambient-blob-3"></span>
+    <div class="fundo-ambiental" aria-hidden="true">
+      <span class="bolha-ambiental bolha-ambiental-1"></span>
+      <span class="bolha-ambiental bolha-ambiental-2"></span>
+      <span class="bolha-ambiental bolha-ambiental-3"></span>
     </div>
 
-    <header class="site-header">
-      <div class="wrap nav">
+    <header class="cabecalho-site">
+      <div class="conteiner barra-navegacao">
         <a class="logo" href="#inicio" aria-label="Voltar ao início">
           ped<span>rocha</span>.dev
         </a>
 
-        <nav id="nav-links" class="nav-links" aria-label="Navegação principal">
+        <nav
+          id="links-navegacao"
+          class="links-navegacao"
+          aria-label="Navegação principal"
+        >
           <a href="#sobre">Sobre</a>
-          <a href="#stack">Stack</a>
+          <a href="#tecnologias">Stack</a>
           <a href="#projetos">Projetos</a>
           <a href="#formacao">Formação</a>
-          <a class="nav-links-contact" href="#contato">Contato</a>
+          <a class="links-navegacao-contato" href="#contato">Contato</a>
         </nav>
 
-        <a class="nav-contact" href="#contato">
+        <a class="botao-navegacao-contato" href="#contato">
           Vamos conversar <span aria-hidden="true">↘</span>
         </a>
 
         <button
-          class="menu-toggle"
+          class="alternador-menu"
           type="button"
           aria-expanded="false"
-          aria-controls="nav-links"
+          aria-controls="links-navegacao"
           aria-label="Abrir menu"
         >
           <span></span><span></span><span></span>
         </button>
       </div>
 
-      <div class="scroll-progress" aria-hidden="true"><span></span></div>
+      <div class="progresso-rolagem" aria-hidden="true"><span></span></div>
     </header>
 
-    <div class="menu-backdrop"></div>
+    <div class="fundo-escuro-menu"></div>
 
     <main>
-      <section class="hero" id="inicio">
-        <div class="wrap hero-grid">
-          <div class="hero-copy">
-            <p class="overline">
+      <section class="destaque" id="inicio">
+        <div class="conteiner grade-destaque">
+          <div class="texto-destaque">
+            <p class="linha-topo">
               <span></span>
-              Fortaleza, CE · disponível para estágio
+              Fortaleza, CE · disponível para trabalho
             </p>
 
-            <p class="hero-kicker">Olá, eu sou</p>
+            <p class="subtitulo-destaque">Olá, eu sou</p>
             <h1>Pedro Rocha</h1>
-            <p class="hero-role">Desenvolvedor Back-End em formação</p>
+            <p class="cargo-destaque">Desenvolvedor Back-End em formação</p>
 
-            <p class="hero-description">
+            <p class="descricao-destaque">
               Estudante de Análise e Desenvolvimento de Sistemas, hoje
               construindo e mantendo produtos reais como a Salonia e a Diva de
               Chapéu. Foco em Node.js, APIs REST e banco de dados.
             </p>
 
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projetos">
+            <div class="acoes-destaque">
+              <a class="botao botao-primario" href="#projetos">
                 Conhecer meus projetos <span aria-hidden="true">→</span>
               </a>
               <a
-                class="text-link"
+                class="link-texto"
                 href="https://www.linkedin.com/in/pedro-rocha-646085342"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -127,7 +131,7 @@
                 LinkedIn <span aria-hidden="true">↗</span>
               </a>
               <a
-                class="text-link"
+                class="link-texto"
                 href="https://github.com/JPedroRochaC"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -137,54 +141,86 @@
             </div>
           </div>
 
-          <figure class="portrait">
-            <div class="portrait-frame">
-              <img
-                src="/img/joao.jpeg"
-                alt="João Pedro Rocha"
-                width="640"
-                height="760"
-                fetchpriority="high"
-              />
+          <figure class="retrato">
+            <div class="moldura-retrato">
+              <div class="cartao-retrato-3d">
+                <div class="face-retrato face-retrato-foto">
+                  <img
+                    src="/img/joao.png"
+                    alt="João Pedro Rocha"
+                    width="640"
+                    height="760"
+                    fetchpriority="high"
+                  />
+                </div>
+
+                <div
+                  class="face-retrato face-retrato-cartao"
+                  aria-hidden="true"
+                >
+                  <div class="cartao-id">
+                    <div class="cartao-id-topo">
+                      <span class="cartao-id-rotulo">Dev Card</span>
+                      <span class="cartao-id-status">
+                        <span class="cartao-id-status-ponto"></span>
+                        Disponível p/ trabalho
+                      </span>
+                    </div>
+
+                    <div class="cartao-id-corpo">
+                      <h4>João Pedro Rocha Cândido</h4>
+                      <h5>19 anos</h5>
+                      <p>Desenvolvedor Back-End em formação</p>
+                    </div>
+
+                    <dl class="cartao-id-info">
+                      <div>
+                        <dt>Agora</dt>
+                        <dd>Construindo projetos</dd>
+                      </div>
+                      <div>
+                        <dt>Stack</dt>
+                        <dd>Node.js · PostgreSQL · Express</dd>
+                      </div>
+                      <div>
+                        <dt>Formação</dt>
+                        <dd>ADS · Unifametro</dd>
+                      </div>
+                      <div>
+                        <dt>Idiomas</dt>
+                        <dd>Português · Inglês</dd>
+                      </div>
+                    </dl>
+                    <div class="cartao-id-rodape">
+                      <span>pedrocha.dev</span>
+                      <span>#0001</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <figcaption>
-              <span>Pedro Rocha</span>
-              <span>ADS · 2º semestre</span>
-            </figcaption>
           </figure>
         </div>
 
-        <div class="wrap hero-index" aria-label="Resumo profissional">
-          <div>
-            <span>Foco</span>
-            <strong>Back-End</strong>
-          </div>
-          <div>
-            <span>Stack principal</span>
-            <strong>Node.js + PostgreSQL</strong>
-          </div>
-          <div>
-            <span>Agora</span>
-            <strong>Construindo a Salonia</strong>
-          </div>
+        <div class="conteiner indice-destaque" aria-label="Resumo profissional">
         </div>
       </section>
 
-      <section class="section about" id="sobre">
-        <div class="wrap editorial-grid">
-          <div class="section-title">
-            <p class="section-label">Sobre</p>
+      <section class="secao sobre" id="sobre">
+        <div class="conteiner editorial-grid">
+          <div class="titulo-secao">
+            <p class="rotulo-secao">Sobre</p>
             <h2>Aprendo construindo produtos completos.</h2>
           </div>
 
-          <div class="about-copy">
-            <p class="lead">
+          <div class="texto-sobre">
+            <p class="texto-introducao">
               Sou estudante de Análise e Desenvolvimento de Sistemas na
               Unifametro e estou construindo minha carreira com foco em
               desenvolvimento back-end.
             </p>
             <p>
-              Gosto de entender o problema antes de escrever o código. Nos meus
+              Gosto de entender o problem antes de escrever o código. Nos meus
               projetos, participo do planejamento, modelo o banco de dados,
               desenvolvo APIs e conecto o back-end a interfaces funcionais.
             </p>
@@ -197,11 +233,11 @@
         </div>
       </section>
 
-      <section class="section stack" id="stack">
-        <div class="wrap">
-          <div class="section-intro">
+      <section class="secao tecnologias" id="tecnologias">
+        <div class="conteiner">
+          <div class="introducao-secao">
             <div>
-              <p class="section-label">Stack</p>
+              <p class="rotulo-secao">Stack</p>
               <h2>Tecnologias que fazem parte do meu processo.</h2>
             </div>
             <p>
@@ -210,14 +246,14 @@
             </p>
           </div>
 
-          <div class="stack-list">
-            <article class="stack-row">
-              <div class="stack-name">
+          <div class="lista-tecnologias">
+            <article class="linha-tecnologias">
+              <div class="nome-tecnologias">
                 <span>BE</span>
                 <h3>Back-End</h3>
               </div>
-              <div class="technology-list">
-                <div class="technology">
+              <div class="lista-itens-tecnologia">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
                     alt=""
@@ -225,7 +261,7 @@
                   />
                   <span>Node.js</span>
                 </div>
-                <div class="technology technology-light">
+                <div class="tecnologia tecnologia-claro">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
                     alt=""
@@ -233,20 +269,20 @@
                   />
                   <span>Express</span>
                 </div>
-                <div class="technology technology-symbol">
+                <div class="tecnologia tecnologia-simbolo">
                   <b>API</b>
                   <span>REST</span>
                 </div>
               </div>
             </article>
 
-            <article class="stack-row">
-              <div class="stack-name">
+            <article class="linha-tecnologias">
+              <div class="nome-tecnologias">
                 <span>DB</span>
                 <h3>Dados</h3>
               </div>
-              <div class="technology-list">
-                <div class="technology">
+              <div class="lista-itens-tecnologia">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
                     alt=""
@@ -254,15 +290,7 @@
                   />
                   <span>PostgreSQL</span>
                 </div>
-                <div class="technology">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-                    alt=""
-                    loading="lazy"
-                  />
-                  <span>MySQL</span>
-                </div>
-                <div class="technology">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
                     alt=""
@@ -273,13 +301,13 @@
               </div>
             </article>
 
-            <article class="stack-row">
-              <div class="stack-name">
+            <article class="linha-tecnologias">
+              <div class="nome-tecnologias">
                 <span>FE</span>
                 <h3>Front-End</h3>
               </div>
-              <div class="technology-list">
-                <div class="technology">
+              <div class="lista-itens-tecnologia">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                     alt=""
@@ -287,7 +315,7 @@
                   />
                   <span>HTML</span>
                 </div>
-                <div class="technology">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
                     alt=""
@@ -295,7 +323,7 @@
                   />
                   <span>CSS</span>
                 </div>
-                <div class="technology">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
                     alt=""
@@ -306,13 +334,13 @@
               </div>
             </article>
 
-            <article class="stack-row">
-              <div class="stack-name">
+            <article class="linha-tecnologias">
+              <div class="nome-tecnologias">
                 <span>OPS</span>
                 <h3>Ferramentas</h3>
               </div>
-              <div class="technology-list">
-                <div class="technology">
+              <div class="lista-itens-tecnologia">
+                <div class="tecnologia">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
                     alt=""
@@ -320,7 +348,7 @@
                   />
                   <span>Git</span>
                 </div>
-                <div class="technology technology-light">
+                <div class="tecnologia tecnologia-claro">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
                     alt=""
@@ -328,25 +356,17 @@
                   />
                   <span>GitHub</span>
                 </div>
-                <div class="technology technology-light">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
-                    alt=""
-                    loading="lazy"
-                  />
-                  <span>Vercel</span>
-                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section projects" id="projetos">
-        <div class="wrap">
-          <div class="section-intro">
+      <section class="secao projetos" id="projetos">
+        <div class="conteiner">
+          <div class="introducao-secao">
             <div>
-              <p class="section-label">Projetos</p>
+              <p class="rotulo-secao">Projetos</p>
               <h2>Produtos que mostram minha evolução na prática.</h2>
             </div>
             <p>
@@ -355,10 +375,10 @@
             </p>
           </div>
 
-          <div class="project-list">
-            <article class="project">
+          <div class="lista-projetos">
+            <article class="projeto">
               <a
-                class="project-visual"
+                class="visual-projeto"
                 href="https://conhecasalonia.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -371,8 +391,8 @@
                 />
               </a>
 
-              <div class="project-copy">
-                <p class="project-type">Produto próprio · Em desenvolvimento</p>
+              <div class="texto-projeto">
+                <p class="tipo-projeto">Produto próprio · Em desenvolvimento</p>
                 <h3>Salonia</h3>
                 <p>
                   Plataforma de agendamento e gestão para profissionais da
@@ -380,7 +400,7 @@
                   multiempresa.
                 </p>
 
-                <dl class="project-details">
+                <dl class="detalhes-projeto">
                   <div>
                     <dt>Meu trabalho</dt>
                     <dd>Produto, back-end, banco e front-end</dd>
@@ -391,7 +411,7 @@
                   </div>
                 </dl>
 
-                <div class="project-links">
+                <div class="links-projeto">
                   <a
                     href="https://conhecasalonia.vercel.app/"
                     target="_blank"
@@ -410,9 +430,9 @@
               </div>
             </article>
 
-            <article class="project project-reverse">
+            <article class="projeto projeto-invertido">
               <a
-                class="project-visual"
+                class="visual-projeto"
                 href="https://divadechapeu.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -425,15 +445,15 @@
                 />
               </a>
 
-              <div class="project-copy">
-                <p class="project-type">Projeto para cliente · Publicado</p>
+              <div class="texto-projeto">
+                <p class="tipo-projeto">Projeto para cliente · Publicado</p>
                 <h3>Diva de Chapéu</h3>
                 <p>
                   Loja de acessórios com catálogo dinâmico, carrinho, cálculo de
                   frete e finalização do pedido diretamente pelo WhatsApp.
                 </p>
 
-                <dl class="project-details">
+                <dl class="detalhes-projeto">
                   <div>
                     <dt>Meu trabalho</dt>
                     <dd>Desenvolvimento completo e publicação</dd>
@@ -444,7 +464,7 @@
                   </div>
                 </dl>
 
-                <div class="project-links">
+                <div class="links-projeto">
                   <a
                     href="https://divadechapeu.vercel.app"
                     target="_blank"
@@ -459,14 +479,14 @@
         </div>
       </section>
 
-      <section class="section education" id="formacao">
-        <div class="wrap editorial-grid">
-          <div class="section-title">
-            <p class="section-label">Formação</p>
+      <section class="secao formacao" id="formacao">
+        <div class="conteiner editorial-grid">
+          <div class="titulo-secao">
+            <p class="rotulo-secao">Formação</p>
             <h2>Minha formação e o caminho que estou seguindo.</h2>
           </div>
 
-          <div class="education-list">
+          <div class="lista-formacao">
             <article>
               <span>Graduação</span>
               <div>
@@ -485,22 +505,22 @@
               <span>Objetivo</span>
               <div>
                 <h3>Primeira oportunidade em tecnologia</h3>
-                <p>Estágio em desenvolvimento, suporte ou áreas relacionadas</p>
+                <p>Trabalho em desenvolvimento, suporte ou áreas relacionadas</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="contact" id="contato">
-        <div class="wrap contact-inner">
-          <p class="section-label">Contato</p>
+      <section class="contato" id="contato">
+        <div class="conteiner conteudo-contato">
+          <p class="rotulo-secao">Contato</p>
           <h2>Tem uma oportunidade ou uma boa ideia?</h2>
           <p>Vamos conversar e descobrir o que podemos construir juntos.</p>
 
-          <div class="contact-links">
+          <div class="links-contato">
             <a
-              class="button button-contact"
+              class="botao botao-contato"
               href="https://www.linkedin.com/in/pedro-rocha-646085342"
               target="_blank"
               rel="noopener noreferrer"
@@ -515,13 +535,13 @@
               WhatsApp <span aria-hidden="true">↗</span>
             </a>
             <button
-              class="copy-btn"
+              class="botao-copiar"
               type="button"
               data-copy="+55 85 99626-9742"
               data-label="Copiar número"
               data-copied-label="Copiado!"
             >
-              <span class="copy-btn-label">Copiar número</span>
+              <span class="rotulo-botao-copiar">Copiar número</span>
             </button>
           </div>
         </div>
@@ -529,7 +549,7 @@
     </main>
 
     <footer>
-      <div class="wrap footer-inner">
+      <div class="conteiner conteudo-rodape">
         <p>© 2026 Pedro Rocha · Fortaleza, CE</p>
         <div>
           <a
@@ -554,7 +574,7 @@
       </div>
     </footer>
 
-    <button class="back-to-top" type="button" aria-label="Voltar ao topo">
+    <button class="voltar-ao-topo" type="button" aria-label="Voltar ao topo">
       ↑
     </button>
 
