@@ -117,6 +117,30 @@
     window.scrollTo({ top: 0, behavior: reduzirMovimento ? "auto" : "smooth" });
   });
 
+  // Rolagem suave para todos os links internos (ancoragem)
+  document.querySelectorAll("a[href^='#']").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const id = link.getAttribute("href");
+      if (id === "#inicio") {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: reduzirMovimento ? "auto" : "smooth" });
+        return;
+      }
+      if (id.startsWith("#")) {
+        const alvo = document.querySelector(id);
+        if (alvo) {
+          event.preventDefault();
+          const cabecalhoAltura = cabecalho?.offsetHeight || 72;
+          const topo = alvo.getBoundingClientRect().top + window.scrollY - cabecalhoAltura;
+          window.scrollTo({
+            top: topo,
+            behavior: reduzirMovimento ? "auto" : "smooth"
+          });
+        }
+      }
+    });
+  });
+
   // Fade-in das imagens principais ao carregar
   document.querySelectorAll(".retrato img, .visual-projeto img").forEach((imagem) => {
     if (imagem.complete) {
@@ -140,41 +164,17 @@
     destaque.addEventListener("pointerleave", () => destaque.classList.remove("brilho-ativo"));
   }
 
-  // Botão de copiar (WhatsApp/e-mail) com feedback visual
-  document.querySelectorAll(".botao-copiar").forEach((botao) => {
-    const rotulo = botao.querySelector(".rotulo-botao-copiar");
-    const textoParaCopiar = botao.dataset.copy;
-    const rotuloPadrao = botao.dataset.label || rotulo?.textContent || "Copiar";
-    const rotuloCopiado = botao.dataset.copiedLabel || "Copiado!";
-    let temporizadorReset;
+  // Alternar a face do cartão de retrato ao clicar (mobile & desktop)
+  const molduraRetrato = document.querySelector(".moldura-retrato");
+  const girarCartaoRetrato = () => {
+    const estaVirado = molduraRetrato.classList.toggle("virado");
+    molduraRetrato.setAttribute("aria-pressed", String(estaVirado));
+  };
 
-    botao.addEventListener("click", async () => {
-      if (!textoParaCopiar) return;
-
-      try {
-        if (navigator.clipboard?.writeText) {
-          await navigator.clipboard.writeText(textoParaCopiar);
-        } else {
-          const auxiliar = document.createElement("textarea");
-          auxiliar.value = textoParaCopiar;
-          auxiliar.style.position = "fixed";
-          auxiliar.style.opacity = "0";
-          document.body.appendChild(auxiliar);
-          auxiliar.select();
-          document.execCommand("copy");
-          auxiliar.remove();
-        }
-
-        botao.classList.add("copiado");
-        if (rotulo) rotulo.textContent = rotuloCopiado;
-
-        window.clearTimeout(temporizadorReset);
-        temporizadorReset = window.setTimeout(() => {
-          botao.classList.remove("copiado");
-          if (rotulo) rotulo.textContent = rotuloPadrao;
-        }, 1800);
-      } catch (erro) {
-      }
-    });
+  molduraRetrato?.addEventListener("click", girarCartaoRetrato);
+  molduraRetrato?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    girarCartaoRetrato();
   });
 })();

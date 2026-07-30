@@ -1,0 +1,370 @@
+/* ==========================================================================
+   Responsividade & Adaptação para Dispositivos Móveis
+   Projeto: pedrocha.dev
+   ========================================================================== */
+
+/* Breakpoint 1: Tablets e Telas Médias (max-width: 960px)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .grade-destaque {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: left;
+  }
+
+  .texto-destaque {
+    max-width: 800px;
+  }
+
+  .retrato {
+    width: min(100%, 350px);
+    margin-inline: auto;
+  }
+
+  .editorial-grid,
+  .introducao-secao {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .introducao-secao > p {
+    padding-bottom: 0;
+  }
+
+  .projeto {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .projeto-invertido .visual-projeto {
+    order: 0;
+  }
+
+  .texto-projeto {
+    max-width: 100%;
+  }
+}
+
+/* Breakpoint 2: Dispositivos de Médio Porte (max-width: 760px)
+   ========================================================================== */
+@media (max-width: 760px) {
+  body {
+    padding-top: 66px;
+  }
+
+  .destaque {
+    padding-top: 20px;
+  }
+
+  .linha-topo {
+    display: none;
+  }
+
+  .grade-destaque {
+    gap: 48px;
+  }
+
+  .retrato {
+    justify-self: center;
+    margin-inline: auto;
+  }
+
+  .barra-navegacao {
+    min-height: 66px;
+  }
+
+  .botao-navegacao-contato {
+    display: none;
+  }
+
+  .alternador-menu {
+    display: block;
+  }
+
+  /* Drawer do Menu Lateral Mobile com Efeito Glass */
+  .links-navegacao {
+    position: fixed;
+    inset: 66px 0 0 auto;
+    z-index: 46;
+    display: flex;
+    width: min(80vw, 300px);
+    height: calc(100vh - 66px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 30px 24px;
+    border-left: 1px solid var(--linha);
+    background: rgba(14, 21, 24, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: var(--tinta);
+    font-size: 15px;
+    transform: translateX(100%);
+    transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1);
+    overflow-y: auto;
+  }
+
+  body.menu-aberto .links-navegacao {
+    transform: translateX(0);
+  }
+
+  .links-navegacao a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--linha);
+  }
+
+  .links-navegacao a:focus-visible {
+    background: var(--destaque-suave);
+    outline-offset: -2px;
+  }
+
+  .links-navegacao a::after {
+    display: none;
+  }
+
+  .links-navegacao-contato {
+    display: block;
+    color: var(--destaque-claro);
+    font-weight: 700;
+  }
+
+  /* Ajustes na visualização de tecnologias no tablet */
+  .linha-tecnologias {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lista-itens-tecnologia {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Breakpoint 3: Celulares / Smartphones (max-width: 560px)
+   ========================================================================== */
+@media (max-width: 560px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  .conteiner {
+    width: min(100% - 34px, 1160px);
+  }
+
+  .secao {
+    padding: 68px 0;
+  }
+
+  /* Hero / Destaque */
+  .destaque {
+    padding-top: 18px;
+  }
+
+  .destaque h1 {
+    font-size: clamp(38px, 11vw, 54px);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+
+  .cargo-destaque {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .descricao-destaque {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
+  .acoes-destaque {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 14px 18px;
+    margin-top: 28px;
+  }
+
+  .acoes-destaque .botao-primario {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .acoes-destaque .link-texto {
+    text-align: center;
+    padding: 6px 0;
+  }
+
+  /* Retrato 3D */
+  .retrato {
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  
+  .moldura-retrato::before {
+    inset: -10px;
+    filter: blur(12px);
+  }
+
+  .cartao-id {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .cartao-id-corpo h4 {
+    font-size: 16px;
+  }
+
+  .cartao-id-corpo p {
+    font-size: 11px;
+  }
+
+  .cartao-id-info {
+    gap: 8px;
+  }
+
+  .cartao-id-info dd {
+    font-size: 10px;
+  }
+
+  /* Grid de Stack de Tecnologias em 2 Colunas */
+  .lista-itens-tecnologia {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tecnologia {
+    padding: 10px 12px;
+    font-size: 10px;
+    gap: 8px;
+    border-left: 2px solid var(--linha-forte);
+  }
+
+  .tecnologia img,
+  .tecnologia b {
+    width: 22px;
+    height: 22px;
+  }
+
+  .tecnologia-simbolo b {
+    font-size: 7px;
+  }
+
+  /* Projetos */
+  .projeto {
+    gap: 26px;
+    padding: 12px 12px 20px;
+    border-radius: 20px;
+  }
+
+  .visual-projeto {
+    aspect-ratio: 16 / 10;
+    border-radius: 14px;
+  }
+
+  .texto-projeto {
+    padding-inline: 4px;
+  }
+
+  .topo-projeto {
+    margin-bottom: 14px;
+  }
+
+  .texto-projeto h3 {
+    margin-bottom: 14px;
+  }
+
+  .destaques-projeto {
+    margin-top: 18px;
+  }
+
+  .links-projeto a {
+    justify-content: center;
+    flex: 1 1 145px;
+  }
+
+  .detalhes-projeto > div,
+  .lista-formacao article {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 0;
+  }
+
+  .lista-formacao {
+    padding-left: 24px;
+  }
+
+  .lista-formacao article::before {
+    top: 15px;
+    left: -26px;
+  }
+
+  .dica-girar {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .detalhes-projeto dt {
+    font-size: 8px;
+  }
+
+  .detalhes-projeto dd {
+    font-size: 11px;
+  }
+
+  /* Botões de Contato Unificados e Padronizados */
+  .links-contato {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+  }
+
+  .links-contato .botao {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .conteudo-rodape {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .conteudo-rodape > div {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* Botão Voltar ao Topo */
+  .voltar-ao-topo {
+    width: 40px;
+    height: 40px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 99;
+  }
+}
+
+/* Breakpoint 4: Acessibilidade - Redução de Movimento
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

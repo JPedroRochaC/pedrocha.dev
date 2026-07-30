@@ -11,14 +11,14 @@
       content="Portfólio de Pedro Rocha, estudante de Análise e Desenvolvimento de Sistemas."
     />
 
-    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/img/favicon-32.png"
+      href="img/favicon-32.png"
     />
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="pedrocha.dev" />
@@ -52,6 +52,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsividade.css" />
   </head>
 
   <body>
@@ -110,7 +111,7 @@
 
             <p class="subtitulo-destaque">Olá, eu sou</p>
             <h1>Pedro Rocha</h1>
-            <p class="cargo-destaque">Desenvolvedor Back-End em formação</p>
+            <p class="cargo-destaque">Desenvolvedor Back-End</p>
 
             <p class="descricao-destaque">
               Estudante de Análise e Desenvolvimento de Sistemas, hoje
@@ -142,16 +143,26 @@
           </div>
 
           <figure class="retrato">
-            <div class="moldura-retrato">
+            <div
+              class="moldura-retrato"
+              role="button"
+              tabindex="0"
+              aria-label="Girar cartão de apresentação"
+              aria-pressed="false"
+            >
               <div class="cartao-retrato-3d">
                 <div class="face-retrato face-retrato-foto">
                   <img
-                    src="/img/joao.png"
-                    alt="João Pedro Rocha"
+                    src="img/joao.png"
+                    alt="João Pedro Rocha Cândido"
                     width="640"
                     height="760"
                     fetchpriority="high"
                   />
+                  <div class="dica-girar" aria-hidden="true">
+                    <span>Girar</span>
+                    <span class="dica-girar-icone">↺</span>
+                  </div>
                 </div>
 
                 <div
@@ -170,7 +181,7 @@
                     <div class="cartao-id-corpo">
                       <h4>João Pedro Rocha Cândido</h4>
                       <h5>19 anos</h5>
-                      <p>Desenvolvedor Back-End em formação</p>
+                      <p>Desenvolvedor Back-End</p>
                     </div>
 
                     <dl class="cartao-id-info">
@@ -220,7 +231,7 @@
               desenvolvimento back-end.
             </p>
             <p>
-              Gosto de entender o problem antes de escrever o código. Nos meus
+              Gosto de entender o problema antes de escrever o código. Nos meus
               projetos, participo do planejamento, modelo o banco de dados,
               desenvolvo APIs e conecto o back-end a interfaces funcionais.
             </p>
@@ -385,20 +396,32 @@
                 aria-label="Conhecer a Salonia"
               >
                 <img
-                  src="/img/salonia.png"
-                  alt="Identidade visual da Salonia"
+                  src="img/salonia.png"
+                  alt="Prévia da plataforma de agendamento Salonia"
                   loading="lazy"
                 />
+                <span class="selo-visual-projeto">
+                  Abrir projeto <span aria-hidden="true">↗</span>
+                </span>
               </a>
 
               <div class="texto-projeto">
-                <p class="tipo-projeto">Produto próprio · Em desenvolvimento</p>
+                <div class="topo-projeto">
+                  <span class="numero-projeto">01</span>
+                  <p class="tipo-projeto">Produto próprio · Em desenvolvimento</p>
+                </div>
                 <h3>Salonia</h3>
                 <p>
                   Plataforma de agendamento e gestão para profissionais da
                   beleza, com painel administrativo, agenda pública e estrutura
                   multiempresa.
                 </p>
+
+                <ul class="destaques-projeto" aria-label="Destaques da Salonia">
+                  <li>Agenda pública</li>
+                  <li>Painel administrativo</li>
+                  <li>Estrutura multiempresa</li>
+                </ul>
 
                 <dl class="detalhes-projeto">
                   <div>
@@ -407,7 +430,12 @@
                   </div>
                   <div>
                     <dt>Tecnologias</dt>
-                    <dd>Node.js, Express, PostgreSQL e Supabase</dd>
+                    <dd class="tags-projeto">
+                      <span>Node.js</span>
+                      <span>Express</span>
+                      <span>PostgreSQL</span>
+                      <span>Supabase</span>
+                    </dd>
                   </div>
                 </dl>
 
@@ -439,19 +467,31 @@
                 aria-label="Abrir o projeto Diva de Chapéu"
               >
                 <img
-                  src="/img/diva.png"
-                  alt="Prévia da loja Diva de Chapéu"
+                  src="img/diva.png"
+                  alt="Prévia do catálogo da loja Diva de Chapéu"
                   loading="lazy"
                 />
+                <span class="selo-visual-projeto">
+                  Abrir projeto <span aria-hidden="true">↗</span>
+                </span>
               </a>
 
               <div class="texto-projeto">
-                <p class="tipo-projeto">Projeto para cliente · Publicado</p>
+                <div class="topo-projeto">
+                  <span class="numero-projeto">02</span>
+                  <p class="tipo-projeto">Projeto para cliente · Publicado</p>
+                </div>
                 <h3>Diva de Chapéu</h3>
                 <p>
                   Loja de acessórios com catálogo dinâmico, carrinho, cálculo de
                   frete e finalização do pedido diretamente pelo WhatsApp.
                 </p>
+
+                <ul class="destaques-projeto" aria-label="Destaques da Diva de Chapéu">
+                  <li>Catálogo dinâmico</li>
+                  <li>Carrinho e cálculo de frete</li>
+                  <li>Pedido pelo WhatsApp</li>
+                </ul>
 
                 <dl class="detalhes-projeto">
                   <div>
@@ -460,7 +500,12 @@
                   </div>
                   <div>
                     <dt>Tecnologias</dt>
-                    <dd>JavaScript, Node.js, Express e Supabase</dd>
+                    <dd class="tags-projeto">
+                      <span>JavaScript</span>
+                      <span>Node.js</span>
+                      <span>Express</span>
+                      <span>Supabase</span>
+                    </dd>
                   </div>
                 </dl>
 
@@ -498,7 +543,7 @@
               <span>Estudos</span>
               <div>
                 <h3>Back-End e bancos de dados</h3>
-                <p>Node.js, APIs REST, SQL, PostgreSQL, Git e GitHub</p>
+                <p>Node.js, APIs REST, PostgreSQL, Git e GitHub</p>
               </div>
             </article>
             <article>
@@ -520,29 +565,21 @@
 
           <div class="links-contato">
             <a
-              class="botao botao-contato"
+              class="botao botao-linkedin"
               href="https://www.linkedin.com/in/pedro-rocha-646085342"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Falar pelo LinkedIn <span aria-hidden="true">→</span>
+              Falar pelo LinkedIn <span aria-hidden="true">↗</span>
             </a>
             <a
+              class="botao botao-whatsapp"
               href="https://wa.me/5585996269742"
               target="_blank"
               rel="noopener noreferrer"
             >
               WhatsApp <span aria-hidden="true">↗</span>
             </a>
-            <button
-              class="botao-copiar"
-              type="button"
-              data-copy="+55 85 99626-9742"
-              data-label="Copiar número"
-              data-copied-label="Copiado!"
-            >
-              <span class="rotulo-botao-copiar">Copiar número</span>
-            </button>
           </div>
         </div>
       </section>
