@@ -149,7 +149,7 @@
   }
 
   .conteiner {
-    width: min(100% - 34px, 1160px);
+    width: min(100% - 44px, 1160px);
   }
 
   .secao {
@@ -186,6 +186,11 @@
   }
 
   .acoes-destaque .botao-primario {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .acoes-destaque .botao-curriculo {
     grid-column: 1 / -1;
     width: 100%;
   }
@@ -236,7 +241,7 @@
 
   .tecnologia {
     padding: 10px 12px;
-    font-size: 10px;
+    font-size: 12px;
     gap: 8px;
     border-left: 2px solid var(--linha-forte);
   }
@@ -306,11 +311,11 @@
   }
 
   .detalhes-projeto dt {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .detalhes-projeto dd {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   /* Botões de Contato Unificados e Padronizados */
@@ -325,7 +330,9 @@
 
   .links-contato .botao {
     width: 100%;
-    padding: 12px 20px;
+    min-height: 52px;
+    padding: 13px 20px;
+    font-size: 14px;
     box-sizing: border-box;
     display: inline-flex;
     justify-content: center;

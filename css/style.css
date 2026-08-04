@@ -83,7 +83,7 @@ svg {
   margin-bottom: 20px;
   color: var(--destaque-claro);
   font-family: var(--fonte-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -592,7 +592,7 @@ body.menu-aberto {
   gap: 10px;
   padding: 12px 19px;
   border: 1px solid transparent;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   transition:
     transform 180ms ease,
@@ -613,11 +613,103 @@ body.menu-aberto {
 .link-texto {
   border-bottom: 1px solid var(--linha-forte);
   color: var(--tinta-suave);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   transition:
     border-color 180ms ease,
     color 180ms ease;
+}
+
+.botao-curriculo {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--fundo-alt), var(--fundo-alt)) padding-box,
+    linear-gradient(
+      135deg,
+      var(--destaque-escuro),
+      var(--destaque),
+      var(--destaque-claro)
+    ) border-box;
+  color: var(--destaque-claro);
+  box-shadow: none;
+}
+
+.botao-curriculo:hover {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--superficie), var(--superficie)) padding-box,
+    linear-gradient(135deg, var(--destaque), var(--destaque-claro)) border-box;
+  color: var(--tinta);
+  box-shadow: 0 10px 28px rgba(57, 183, 164, 0.16);
+  transform: translateY(-2px);
+}
+
+.icone-documento {
+  position: relative;
+  width: 15px;
+  height: 18px;
+  flex: 0 0 auto;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+}
+
+.icone-documento::before,
+.icone-documento::after {
+  position: absolute;
+  left: 3px;
+  width: 7px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.icone-documento::before {
+  top: 6px;
+}
+
+.icone-documento::after {
+  top: 10px;
+}
+
+.botao-email {
+  border-color: #ea4335;
+  background: linear-gradient(135deg, #ea4335, #c5221f);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(234, 67, 53, 0.2);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.links-contato .botao img {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.botao-email:hover {
+  border-color: #ff7468;
+  background: linear-gradient(135deg, #f05447, #d93025);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(234, 67, 53, 0.25);
+  transform: translateY(-2px);
+}
+
+.icone-linkedin {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1;
 }
 
 .link-texto:hover {
@@ -1195,7 +1287,7 @@ body.menu-aberto {
 .texto-projeto > p {
   max-width: 520px;
   color: var(--tinta-suave);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .destaques-projeto {
@@ -1252,13 +1344,13 @@ body.menu-aberto {
 .detalhes-projeto dt {
   color: var(--tinta-suave);
   font-family: var(--fonte-mono);
-  font-size: 9px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 
 .detalhes-projeto dd {
   color: var(--tinta);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -1278,7 +1370,7 @@ body.menu-aberto {
   background: var(--destaque-suave);
   color: var(--destaque-claro);
   font-family: var(--fonte-mono);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
   line-height: 1;
   transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
@@ -1306,7 +1398,7 @@ body.menu-aberto {
   border: 1px solid var(--linha-forte);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.025);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   transition:
     border-color 180ms ease,
@@ -1368,7 +1460,7 @@ body.menu-aberto {
   padding-top: 4px;
   color: var(--destaque-claro);
   font-family: var(--fonte-mono);
-  font-size: 9px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 
@@ -1382,7 +1474,7 @@ body.menu-aberto {
 
 .lista-formacao p {
   color: var(--tinta-suave);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Contato */
@@ -1413,9 +1505,12 @@ body.menu-aberto {
 }
 
 .conteudo-contato > p:not(.rotulo-secao) {
+  max-width: 780px;
+  margin-inline: auto;
   margin-top: 20px;
   color: var(--tinta-suave);
-  font-size: 15px;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.7;
 }
 
 .links-contato {
@@ -1460,7 +1555,7 @@ footer {
   background: rgba(var(--fundo-rgb), 0.94);
   color: var(--tinta-suave);
   font-family: var(--fonte-mono);
-  font-size: 9px;
+  font-size: 11px;
   text-transform: uppercase;
 }
 

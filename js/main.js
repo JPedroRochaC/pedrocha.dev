@@ -6,6 +6,28 @@
   const fundoMenu = document.querySelector(".fundo-escuro-menu");
   const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const atualizarInformacoesAutomaticas = () => {
+    const hoje = new Date();
+    const aniversarioNesteAno = new Date(hoje.getFullYear(), 5, 6);
+    const idade =
+      hoje.getFullYear() - 2007 - (hoje < aniversarioNesteAno ? 1 : 0);
+    const elementoIdade = document.querySelector("#idade-atual");
+    if (elementoIdade) elementoIdade.textContent = String(idade);
+
+    const inicioCurso = new Date(2026, 0, 1);
+    const mesesDeCurso =
+      (hoje.getFullYear() - inicioCurso.getFullYear()) * 12 +
+      hoje.getMonth() -
+      inicioCurso.getMonth();
+    const semestre = Math.max(1, Math.floor(mesesDeCurso / 6) + 1);
+    const elementoSemestre = document.querySelector("#semestre-atual");
+    if (elementoSemestre) {
+      elementoSemestre.textContent = `${semestre}º semestre`;
+    }
+  };
+
+  atualizarInformacoesAutomaticas();
+
   const fecharMenu = () => {
     corpo.classList.remove("menu-aberto");
     alternadorMenu?.setAttribute("aria-expanded", "false");
@@ -67,26 +89,25 @@
 
   if (reduzirMovimento || !("IntersectionObserver" in window)) {
     alvosRevelacao.forEach((elemento) => elemento.classList.add("visivel"));
-    return;
+  } else {
+    alvosRevelacao.forEach((elemento) => elemento.classList.add("revelar"));
+
+    const observador = new IntersectionObserver(
+      (entradas) => {
+        entradas.forEach((entrada) => {
+          if (!entrada.isIntersecting) return;
+          entrada.target.classList.add("visivel");
+          observador.unobserve(entrada.target);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -48px",
+      }
+    );
+
+    alvosRevelacao.forEach((elemento) => observador.observe(elemento));
   }
-
-  alvosRevelacao.forEach((elemento) => elemento.classList.add("revelar"));
-
-  const observador = new IntersectionObserver(
-    (entradas) => {
-      entradas.forEach((entrada) => {
-        if (!entrada.isIntersecting) return;
-        entrada.target.classList.add("visivel");
-        observador.unobserve(entrada.target);
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -48px",
-    }
-  );
-
-  alvosRevelacao.forEach((elemento) => observador.observe(elemento));
 
   // Link ativo no menu conforme a seção visível
   const secoes = document.querySelectorAll("main section[id]");
