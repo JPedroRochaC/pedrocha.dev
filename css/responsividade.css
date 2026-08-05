@@ -31,18 +31,6 @@
     padding-bottom: 0;
   }
 
-  .projeto {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .projeto-invertido .visual-projeto {
-    order: 0;
-  }
-
-  .texto-projeto {
-    max-width: 100%;
-  }
 }
 
 /* Breakpoint 2: Dispositivos de Médio Porte (max-width: 760px)
@@ -208,8 +196,8 @@
   }
   
   .moldura-retrato::before {
-    inset: -10px;
-    filter: blur(12px);
+    inset: -16px;
+    filter: blur(14px);
   }
 
   .cartao-id {
@@ -257,39 +245,21 @@
   }
 
   /* Projetos */
-  .projeto {
-    gap: 26px;
-    padding: 12px 12px 20px;
+  .projeto-futuro {
+    min-height: 300px;
+    gap: 16px;
+    padding: 42px 20px;
     border-radius: 20px;
   }
 
-  .visual-projeto {
-    aspect-ratio: 16 / 10;
-    border-radius: 14px;
+  .projeto-futuro h3 {
+    font-size: 34px;
   }
 
-  .texto-projeto {
-    padding-inline: 4px;
+  .projeto-futuro p {
+    font-size: 16px;
   }
 
-  .topo-projeto {
-    margin-bottom: 14px;
-  }
-
-  .texto-projeto h3 {
-    margin-bottom: 14px;
-  }
-
-  .destaques-projeto {
-    margin-top: 18px;
-  }
-
-  .links-projeto a {
-    justify-content: center;
-    flex: 1 1 145px;
-  }
-
-  .detalhes-projeto > div,
   .lista-formacao article {
     grid-template-columns: 1fr;
     gap: 4px;
@@ -308,14 +278,6 @@
   .dica-girar {
     right: 12px;
     bottom: 12px;
-  }
-
-  .detalhes-projeto dt {
-    font-size: 10px;
-  }
-
-  .detalhes-projeto dd {
-    font-size: 13px;
   }
 
   /* Botões de Contato Unificados e Padronizados */
