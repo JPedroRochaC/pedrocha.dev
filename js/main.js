@@ -163,7 +163,7 @@
   });
 
   // Fade-in das imagens principais ao carregar
-  document.querySelectorAll(".retrato img, .visual-projeto img").forEach((imagem) => {
+  document.querySelectorAll(".retrato img").forEach((imagem) => {
     if (imagem.complete) {
       imagem.classList.add("carregado");
     } else {
