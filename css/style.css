@@ -261,6 +261,13 @@ svg {
   gap: 28px;
 }
 
+.acoes-cabecalho {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo {
   flex: 0 0 auto;
   font-family: var(--fonte-titulo);
@@ -344,6 +351,76 @@ svg {
 
 .links-navegacao-contato {
   display: none;
+}
+
+.alternador-idioma {
+  position: relative;
+  display: inline-flex;
+  width: 76px;
+  height: 34px;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 4px;
+  margin-right: 4px;
+  padding: 3px;
+  border: 1px solid var(--linha-forte);
+  border-radius: 6px;
+  background: rgba(14, 21, 24, 0.72);
+  color: var(--tinta-suave);
+  font-family: var(--fonte-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.alternador-idioma::before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 33px;
+  height: 26px;
+  border-radius: 4px;
+  background: var(--destaque);
+  box-shadow: 0 3px 10px rgba(57, 183, 164, 0.2);
+  content: "";
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[lang="en"] .alternador-idioma::before {
+  transform: translateX(35px);
+}
+
+.alternador-idioma:hover,
+.alternador-idioma:focus-visible {
+  border-color: var(--destaque);
+  background: var(--destaque-suave);
+}
+
+.alternador-idioma:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--destaque-claro);
+}
+
+.alternador-idioma span {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 33px;
+  height: 26px;
+  place-items: center;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+.alternador-idioma span:not(.ativo) {
+  opacity: 0.48;
+}
+
+.alternador-idioma .ativo {
+  color: #07110f;
 }
 
 .alternador-menu {
@@ -678,6 +755,10 @@ body.menu-aberto {
   --brilho-2: #0a66c2;
   --brilho-3: #70b5f9;
   --brilho-sombra: rgba(10, 102, 194, 0.42);
+  border-color: #0a66c2;
+  background: #0a66c2;
+  color: #ffffff;
+  column-gap: 12px;
 }
 
 .botao-whatsapp {
@@ -1465,15 +1546,10 @@ body.menu-aberto {
   margin-top: 34px;
 }
 
-.botao-linkedin {
-  background: #0a66c2;
-  color: #ffffff;
-  border-color: #0a66c2;
-}
-
 .botao-linkedin:hover {
-  background: #004182;
-  border-color: #004182;
+  border-color: #70b5f9;
+  background: linear-gradient(135deg, #0a66c2, #378fe9);
+  box-shadow: 0 12px 30px rgba(10, 102, 194, 0.3);
   transform: translateY(-2px);
   color: #ffffff;
 }
@@ -1561,6 +1637,7 @@ footer {
 /* Feedback de clique tátil, mantido no final para superar hover */
 .botao:active,
 .botao-navegacao-contato:active,
+.alternador-idioma:active,
 .alternador-menu:active,
 .voltar-ao-topo:active {
   transform: scale(0.95);
