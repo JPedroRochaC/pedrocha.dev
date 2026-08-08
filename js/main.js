@@ -51,6 +51,7 @@
       "My current foundation brings together the main tools I use to build interfaces, APIs and data persistence."
     ],
     ["Dados", "Database"],
+    ["Foco atual", "Current focus"],
     ["Ferramentas", "Tools"],
     ["IA", "AI"],
     ["IA e Produtividade", "AI & Productivity"],
@@ -369,20 +370,6 @@
       imagem.addEventListener("load", () => imagem.classList.add("carregado"), { once: true });
     }
   });
-
-  // Brilho seguindo o cursor no hero (só em dispositivos com mouse)
-  const destaque = document.querySelector(".destaque");
-  if (destaque && window.matchMedia("(pointer: fine)").matches) {
-    destaque.addEventListener("pointermove", (event) => {
-      const retangulo = destaque.getBoundingClientRect();
-      const x = ((event.clientX - retangulo.left) / retangulo.width) * 100;
-      const y = ((event.clientY - retangulo.top) / retangulo.height) * 100;
-      destaque.style.setProperty("--x", `${x}%`);
-      destaque.style.setProperty("--y", `${y}%`);
-      destaque.classList.add("brilho-ativo");
-    });
-    destaque.addEventListener("pointerleave", () => destaque.classList.remove("brilho-ativo"));
-  }
 
   // Alternar a face do cartão de retrato ao clicar (mobile & desktop)
   const molduraRetrato = document.querySelector(".moldura-retrato");

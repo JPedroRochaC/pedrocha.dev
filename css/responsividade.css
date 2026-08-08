@@ -31,6 +31,11 @@
     padding-bottom: 0;
   }
 
+  .formacao .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
 }
 
 /* Breakpoint 2: Dispositivos de Médio Porte (max-width: 760px)
@@ -38,6 +43,13 @@
 @media (max-width: 760px) {
   body {
     padding-top: 66px;
+  }
+
+  .cabecalho-site,
+  .cabecalho-site.rolado {
+    background: rgba(10, 15, 18, 0.98);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .destaque {
@@ -58,6 +70,7 @@
   }
 
   .barra-navegacao {
+    grid-template-columns: auto minmax(0, 1fr) auto;
     min-height: 66px;
   }
 
@@ -158,6 +171,14 @@
     padding-top: 18px;
   }
 
+  .faiscas-hero span:nth-child(n + 9) {
+    display: none;
+  }
+
+  .faiscas-contato span:nth-child(n + 7) {
+    display: none;
+  }
+
   .destaque h1 {
     font-size: clamp(38px, 11vw, 54px);
     letter-spacing: -0.04em;
@@ -205,8 +226,7 @@
   }
   
   .moldura-retrato::before {
-    inset: -16px;
-    filter: blur(14px);
+    display: none;
   }
 
   .cartao-id {
@@ -269,19 +289,19 @@
     font-size: 16px;
   }
 
-  .lista-formacao article {
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 10px 0;
-  }
-
   .lista-formacao {
-    padding-left: 24px;
+    grid-template-columns: 1fr;
+    gap: 1px;
   }
 
-  .lista-formacao article::before {
-    top: 15px;
-    left: -26px;
+  .lista-formacao article,
+  .lista-formacao article:first-child {
+    min-height: 0;
+    padding: 26px 24px;
+  }
+
+  .lista-formacao article:first-child {
+    grid-column: auto;
   }
 
   .dica-girar {
@@ -328,6 +348,39 @@
     right: 16px;
     bottom: 16px;
     z-index: 99;
+  }
+}
+
+/* Interações conforme o dispositivo
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+  :is(
+    .botao-curriculo,
+    .botao-email,
+    .botao-linkedin,
+    .botao-whatsapp,
+    .botao-primario,
+    .botao-navegacao-contato
+  ):is(:hover, :focus-visible)::before {
+    animation: percorrer-borda-botao 2.8s linear infinite;
+    opacity: 0.76;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  :is(
+    .botao-curriculo,
+    .botao-email,
+    .botao-linkedin,
+    .botao-whatsapp,
+    .botao-primario,
+    .botao-navegacao-contato
+  )::before {
+    inset: -3px;
+    padding: 1px;
+    animation: none;
+    filter: none;
+    opacity: 0.42;
   }
 }
 
