@@ -55,17 +55,29 @@
     ["Ferramentas", "Tools"],
     ["IA", "AI"],
     ["IA e Produtividade", "AI & Productivity"],
-    ["Novos projetos estão a caminho.", "New projects are on the way."],
+    ["Projetos que mostram minha evolução na prática.", "Projects that show my growth in practice."],
     [
-      "Este espaço será atualizado conforme eu desenvolver e publicar novas soluções.",
-      "This space will be updated as I build and publish new solutions."
+      "Uma seleção de soluções que desenvolvi para aprender, resolver problemas reais e evoluir como desenvolvedor full-stack.",
+      "A selection of solutions I built to learn, solve real problems and grow as a full-stack developer."
     ],
-    ["Em desenvolvimento", "In development"],
-    ["Futuro projeto aqui.", "Future project coming soon."],
+    ["Pequenos negócios", "Small businesses"],
+    ["Link na bio", "Link-in-bio"],
+    ["Problema", "Problem"],
     [
-      "Estou preparando uma nova aplicação web para apresentar neste espaço em breve.",
-      "I'm preparing a new web application to feature here soon."
+      "Três pequenos negócios precisavam reunir seus principais canais em um endereço fácil de compartilhar.",
+      "Three small businesses needed to bring their main channels together in one easy-to-share address."
     ],
+    ["Ação", "Action"],
+    [
+      "Criei páginas responsivas com identidade própria e integrações de contato, catálogo, avaliações e delivery.",
+      "I built responsive pages with custom identities and integrations for contact, catalogs, reviews and delivery."
+    ],
+    ["Resultado", "Result"],
+    [
+      "Mundo Mapê, Diva de Chapéu e Fala, Pudim! agora possuem uma presença digital simples, rápida e organizada.",
+      "Mundo Mapê, Diva de Chapéu and Fala, Pudim! now have a simple, fast and organized digital presence."
+    ],
+    ["Páginas publicadas", "Published pages"],
     ["Formação e estudos que sustentam minha evolução.", "Education and studies supporting my growth."],
     ["Graduação", "Degree"],
     ["Análise e Desenvolvimento de Sistemas", "Systems Analysis and Development"],

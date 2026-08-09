@@ -36,6 +36,10 @@
     gap: 40px;
   }
 
+  .lista-projetos {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 /* Breakpoint 2: Dispositivos de Médio Porte (max-width: 760px)
@@ -144,6 +148,23 @@
   .lista-itens-tecnologia {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .lista-entregas {
+    grid-template-columns: 1fr;
+  }
+
+  .entrega-linkbio,
+  .entrega-linkbio:first-child,
+  .entrega-linkbio:last-child {
+    padding: 10px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--linha);
+  }
+
+  .entrega-linkbio:last-child {
+    border-bottom: 0;
+  }
+
 }
 
 /* Breakpoint 3: Celulares / Smartphones (max-width: 560px)
@@ -274,19 +295,29 @@
   }
 
   /* Projetos */
-  .projeto-futuro {
-    min-height: 300px;
-    gap: 16px;
-    padding: 42px 20px;
-    border-radius: 20px;
+  .projeto-linkbio {
+    padding: 20px 18px;
+    border-radius: 18px;
   }
 
-  .projeto-futuro h3 {
-    font-size: 34px;
+  .meta-projeto-linkbio {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
   }
 
-  .projeto-futuro p {
-    font-size: 16px;
+  .projeto-linkbio h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .bloco-case p {
+    font-size: 12px;
+  }
+
+  .link-marca {
+    font-size: 14px;
   }
 
   .lista-formacao {
