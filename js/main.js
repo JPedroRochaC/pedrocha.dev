@@ -18,10 +18,10 @@
     ["Vamos conversar", "Let's talk"],
     ["Fortaleza, CE · disponível para trabalho", "Fortaleza, Brazil · available for work"],
     ["Olá, eu sou", "Hi, I'm"],
-    ["Desenvolvedor Full-Stack em formação", "Aspiring Full-Stack Developer"],
+    ["Desenvolvedor Back-End em formação", "Aspiring Back-End Developer"],
     [
-      "Estudante de Análise e Desenvolvimento de Sistemas construindo uma base full-stack. No front-end, desenvolvo interfaces com HTML, CSS e JavaScript; no back-end, estudo Node.js e APIs REST para conectar interfaces e regras de negócio.",
-      "Systems Analysis and Development student building a full-stack foundation. On the front end, I create interfaces with HTML, CSS and JavaScript; on the back end, I study Node.js and REST APIs to connect interfaces and business logic."
+      "Desenvolvedor Back-End em formação, com foco em Java e Spring Boot. Estudante de Análise e Desenvolvimento de Sistemas, construindo APIs REST e trabalhando modelagem de dados com SQL.",
+      "Aspiring Back-End Developer focused on Java and Spring Boot. Systems Analysis and Development student building REST APIs and working with SQL data modeling."
     ],
     ["Conhecer minha stack", "Explore my stack"],
     ["Baixar currículo", "Download résumé"],
@@ -32,69 +32,54 @@
     ["Estudando e praticando", "Studying and practicing"],
     ["Idiomas", "Languages"],
     ["Português · Inglês", "Portuguese · English"],
-    ["Construindo uma visão completa, do front-end ao back-end.", "Building a complete perspective, from front end to back end."],
+    ["Construindo bases sólidas para aplicações back-end.", "Building solid foundations for back-end applications."],
     [
-      "Sou Pedro Rocha, estudante de Análise e Desenvolvimento de Sistemas na Unifametro e desenvolvedor full-stack em formação. Gosto de compreender como interface, regras de negócio e dados se conectam em uma aplicação web.",
-      "I'm Pedro Rocha, a Systems Analysis and Development student at Unifametro and an aspiring full-stack developer. I enjoy understanding how interfaces, business logic and data connect within a web application."
+      "Sou Pedro Rocha, estudante de Análise e Desenvolvimento de Sistemas na Unifametro e desenvolvedor back-end em formação. Gosto de entender como regras de negócio, persistência de dados e arquitetura de APIs se conectam em uma aplicação.",
+      "I'm Pedro Rocha, a Systems Analysis and Development student at Unifametro and an aspiring back-end developer. I enjoy understanding how business rules, data persistence and API architecture connect within an application."
     ],
     [
       "Sou curioso, organizado e gosto de entender o motivo por trás de cada solução. Aprendo melhor colocando os conceitos em prática, analisando o que não funcionou e buscando maneiras mais simples e claras de escrever código.",
       "I'm curious, organized and driven to understand the reasoning behind each solution. I learn best by putting concepts into practice, reviewing what did not work and finding simpler, clearer ways to write code."
     ],
     [
-      "Busco minha primeira oportunidade para aplicar essa base, desenvolver experiência ao lado de uma equipe e contribuir com responsabilidade enquanto continuo evoluindo como profissional.",
-      "I'm looking for my first opportunity to apply this foundation, gain experience alongside a team and contribute responsibly while continuing to grow as a professional."
+      "Busco minha primeira oportunidade em back-end para aplicar essa base, desenvolver experiência ao lado de uma equipe e contribuir com responsabilidade enquanto continuo evoluindo como profissional.",
+      "I'm looking for my first back-end opportunity to apply this foundation, gain experience alongside a team and contribute responsibly while continuing to grow as a professional."
     ],
-    ["Tecnologias que conectam front-end, back-end e dados.", "Technologies connecting front end, back end and data."],
+    ["Tecnologias que sustentam APIs e dados.", "Technologies supporting APIs and data."],
     [
-      "Minha base atual reúne as principais ferramentas que utilizo para desenvolver interfaces, APIs e persistência de dados.",
-      "My current foundation brings together the main tools I use to build interfaces, APIs and data persistence."
+      "Minha base atual é focada em desenvolvimento back-end, APIs REST e modelagem de dados, com front-end como apoio.",
+      "My current foundation focuses on back-end development, REST APIs and data modeling, with front end as supporting knowledge."
     ],
     ["Dados", "Database"],
     ["Foco atual", "Current focus"],
     ["Ferramentas", "Tools"],
     ["IA", "AI"],
     ["IA e Produtividade", "AI & Productivity"],
-    ["Projetos que mostram minha evolução na prática.", "Projects that show my growth in practice."],
+    ["Projetos back-end em construção.", "Back-end projects in progress."],
     [
-      "Uma seleção de soluções que desenvolvi para aprender, resolver problemas reais e evoluir como desenvolvedor full-stack.",
-      "A selection of solutions I built to learn, solve real problems and grow as a full-stack developer."
+      "Estou desenvolvendo projetos com Spring Boot e PostgreSQL para demonstrar APIs REST, regras de negócio e persistência de dados.",
+      "I'm building Spring Boot and PostgreSQL projects to demonstrate REST APIs, business rules and data persistence."
     ],
-    ["Pequenos negócios", "Small businesses"],
-    ["Link na bio", "Link-in-bio"],
-    ["Problema", "Problem"],
-    [
-      "Três pequenos negócios precisavam reunir seus principais canais em um endereço fácil de compartilhar.",
-      "Three small businesses needed to bring their main channels together in one easy-to-share address."
-    ],
-    ["Ação", "Action"],
-    [
-      "Criei páginas responsivas com identidade própria e integrações de contato, catálogo, avaliações e delivery.",
-      "I built responsive pages with custom identities and integrations for contact, catalogs, reviews and delivery."
-    ],
-    ["Resultado", "Result"],
-    [
-      "Mundo Mapê, Diva de Chapéu e Fala, Pudim! agora possuem uma presença digital simples, rápida e organizada.",
-      "Mundo Mapê, Diva de Chapéu and Fala, Pudim! now have a simple, fast and organized digital presence."
-    ],
-    ["Páginas publicadas", "Published pages"],
+    ["Em construção", "In progress"],
+    ["Em breve, projetos completos de back-end estarão disponíveis aqui.", "Complete back-end projects will be available here soon."],
+    ["Acompanhar no GitHub", "Follow on GitHub"],
     ["Formação e estudos que sustentam minha evolução.", "Education and studies supporting my growth."],
     ["Graduação", "Degree"],
     ["Análise e Desenvolvimento de Sistemas", "Systems Analysis and Development"],
     ["ADS · Unifametro", "Systems Analysis and Development · Unifametro"],
     ["Estudos", "Studies"],
-    ["Desenvolvimento web", "Web development"],
+    ["Desenvolvimento back-end", "Back-end development"],
     [
-      "HTML, CSS, JavaScript, Node.js, APIs REST, PostgreSQL e MongoDB",
-      "HTML, CSS, JavaScript, Node.js, REST APIs, PostgreSQL and MongoDB"
+      "Java, Spring Boot, SQL, APIs REST, Orientação a Objetos",
+      "Java, Spring Boot, SQL, REST APIs, Object-Oriented Programming"
     ],
     ["Objetivo", "Goal"],
     ["Primeira oportunidade como desenvolvedor", "First opportunity as a developer"],
-    ["Estágio ou posição júnior em desenvolvimento full-stack", "Internship or junior full-stack development position"],
+    ["Estágio ou posição júnior em desenvolvimento back-end", "Back-end development internship or junior position"],
     ["Tem uma oportunidade ou uma boa ideia?", "Have an opportunity or a great idea?"],
     [
-      "Busco minha primeira oportunidade como desenvolvedor full-stack. Quero aplicar meus conhecimentos em front-end e back-end, aprender com uma equipe e contribuir na construção de soluções úteis.",
-      "I'm looking for my first opportunity as a full-stack developer. I want to apply my front-end and back-end knowledge, learn with a team and help build useful solutions."
+      "Busco minha primeira oportunidade como desenvolvedor back-end. Quero aplicar meus conhecimentos em Java, Spring Boot e SQL, aprender com uma equipe e contribuir na construção de soluções úteis.",
+      "I'm looking for my first opportunity as a back-end developer. I want to apply my knowledge of Java, Spring Boot and SQL, learn with a team and help build useful solutions."
     ],
     ["Enviar e-mail", "Send an email"],
     ["Falar pelo LinkedIn", "Message me on LinkedIn"],
@@ -125,14 +110,14 @@
   const atualizarMetadados = (idioma) => {
     const emIngles = idioma === "en";
     const titulo = emIngles
-      ? "Pedro Rocha · Full-Stack Developer"
-      : "Pedro Rocha · Desenvolvedor Full-Stack";
+      ? "Pedro Rocha · Java Back-End Developer"
+      : "Pedro Rocha · Desenvolvedor Back-End Java";
     const descricao = emIngles
-      ? "Pedro Rocha's portfolio, Systems Analysis and Development student and aspiring full-stack developer."
-      : "Portfólio de Pedro Rocha, estudante de ADS e desenvolvedor full-stack em formação.";
+      ? "Pedro Rocha's portfolio, Systems Analysis and Development student and aspiring Java back-end developer."
+      : "Portfólio de Pedro Rocha, estudante de ADS e desenvolvedor back-end em formação com foco em Java, Spring Boot e SQL.";
     const descricaoSocial = emIngles
-      ? "Aspiring full-stack developer working with HTML, CSS, JavaScript, Node.js and REST APIs."
-      : "Desenvolvedor full-stack em formação com HTML, CSS, JavaScript, Node.js e APIs REST.";
+      ? "Aspiring back-end developer working with Java, Spring Boot, SQL and REST APIs."
+      : "Desenvolvedor back-end em formação com foco em Java, Spring Boot, SQL e APIs REST.";
 
     document.title = titulo;
     document.querySelector('meta[name="description"]')?.setAttribute("content", descricao);
